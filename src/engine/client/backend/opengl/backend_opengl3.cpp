@@ -568,14 +568,18 @@ bool CCommandProcessorFragment_OpenGL3_3::Cmd_Init(
 	// fix the alignment to allow even 1byte changes, e.g. for alpha components
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
+#if !defined(BACKEND_AS_OPENGL_ES)
 	InitPostProcess(pCommand);
+#endif
 	return true;
 }
 
 void CCommandProcessorFragment_OpenGL3_3::Cmd_Shutdown(
 	const SCommand_Shutdown *pCommand)
 {
+#if !defined(BACKEND_AS_OPENGL_ES)
 	ShutdownPostProcess();
+#endif
 	glUseProgram(0);
 
 	m_pPrimitiveProgram->DeleteProgram();

@@ -106,6 +106,7 @@ class CJsonFileWriter;
 #include "components/zz_clickgui.h"
 #include "components/zz_hook_aimbot.h"
 #include "components/zz_visual_effects.h"
+#include "components/laserunfreeze.h"
 
 #include <memory>
 #include <vector>
@@ -210,6 +211,7 @@ public:
 	OpenKrx::CClassicAvoid m_OpenClassicAvoid;
 	OpenKrx::CRescueBots m_OpenRescue;
 	OpenKrx::CMediumBots m_OpenHookRide;
+	CLaserUnfreeze m_LaserUnfreeze;
 	CGameWorld &KrxGameWorld() { return m_GameWorld; }
 	CGameWorld &KrxPredictedWorld() { return m_RegularPredictedWorld; }
 	bool OpenKrxAvoidSuspended() const;

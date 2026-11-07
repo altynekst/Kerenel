@@ -983,6 +983,39 @@ MACRO_CONFIG_INT(ClZzAutoUnfreezeKey, cl_zz_auto_unfreeze_key, 0, 0, 512,
 MACRO_CONFIG_INT(ClZzAutoUnfreezeMod, cl_zz_auto_unfreeze_mod, 0, 0, 7,
 	CFGFLAG_CLIENT | CFGFLAG_SAVE | CFGFLAG_HIDDEN,
 	"KernelNet auto-unfreeze bind modifier mask")
+MACRO_CONFIG_INT(ClZzAutoUnfreeze, cl_zz_auto_unfreeze, 0, 0, 1,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: laser shot plans to unfreeze you")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeSilent, cl_zz_auto_unfreeze_silent, 1, 0, 1,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: keep the visible cursor unchanged")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeTicks, cl_zz_auto_unfreeze_ticks, 20, 1, 120,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: prediction ticks ahead")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeDirTicks, cl_zz_auto_unfreeze_dir_ticks, 12, 1, 40,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: react ticks to freeze")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeMaxPoints, cl_zz_auto_unfreeze_max_points, 5, 1, 10,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: max laser bounces")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeFov, cl_zz_auto_unfreeze_fov, 90, 5, 360,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: aim field of view")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeMostBounces, cl_zz_auto_unfreeze_most_bounces, 0, 0, 1,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: prefer lasers with more bounces")
+MACRO_CONFIG_INT(ClZzAutoUnfreezeCurDirTicks, cl_zz_auto_unfreeze_cur_dir_ticks, 10, 1, 40,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet auto-unfreeze: current direction lookahead ticks")
+MACRO_CONFIG_INT(ClZzNewYearMenu, cl_zz_new_year_menu, 0, 0, 1,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet: auto-unfreeze settings page opened")
+MACRO_CONFIG_INT(ClZzNewYearMenuDecor, cl_zz_new_year_menu_decor, 1, 0, 1,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE,
+	"KernelNet: auto-unfreeze settings page decorations")
+MACRO_CONFIG_INT(ClZzNewYearMenuKey, cl_zz_new_year_menu_key, 0, 0, 512,
+	CFGFLAG_CLIENT | CFGFLAG_SAVE | CFGFLAG_HIDDEN,
+	"KernelNet auto-unfreeze menu bind key")
 MACRO_CONFIG_INT(ClZzFngAutoLaserKey, cl_zz_fng_auto_laser_key, 0, 0, 512,
 	CFGFLAG_CLIENT | CFGFLAG_SAVE | CFGFLAG_HIDDEN,
 	"KernelNet FNG auto-laser bind key")
